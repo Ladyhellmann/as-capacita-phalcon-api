@@ -9,6 +9,7 @@ use App\Users\Models\Users;
  *
  * @package App\Users\Controllers
  * @author Otávio Augusto Borges Pinto <otavio@agenciasys.com.br>
+ * @Modify Luana Hellmann <luly.hellmann@gmail.com>
  * @copyright Softers Sistemas de Gestão © 2016
  */
 class UsersController extends RESTController
@@ -32,9 +33,16 @@ class UsersController extends RESTController
                         'Phones.iPhoneId',
                         'Phones.iUserId as iPhoneUserId',
                         'Phones.sPhone',
+                        'Endereco.iEnderecoId',
+                        'Endereco.iUserId as iEnderecoUserId',
+                        'Endereco.sCep',
+                        'Endereco.sEndereco',
+                        'Endereco.iNumero',
+                        'Endereco.sComplemento',
                     ]
                 )
                 ->leftJoin('\App\Users\Models\Phones', 'Phones.iUserId = Users.iUserId', 'Phones')
+                ->leftJoin('\App\Users\Models\Endereco', 'Endereco.iUserId = Users.iUserId', 'Endereco')
                 ->where('true');
 
             return $query

@@ -18,7 +18,7 @@ class Phones extends \App\Models\BaseModel
     public $iPhoneId;
 
     /**
-     * @Column(type="string", length=10, nullable=false)
+     * @Column(type="integer", length=10, nullable=false
      */
     public $iUserId;
 

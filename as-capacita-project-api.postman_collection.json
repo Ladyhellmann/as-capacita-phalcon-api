@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "as-capacita-project-api",
+		"_postman_id": "231a61a6-92c3-735b-2534-974858a7c940",
+		"description": "API REST com Phalcon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/users/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Rota raiz da API"
+			},
+			"response": []
+		},
+		{
+			"name": "List Users",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/users/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Busca usuários no banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "List User",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/endereco/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Busca um usuário no banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/endereco",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "otavio",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "sEmail",
+							"value": "otavio@agenciasys.com.br",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Adiciona um usuário no banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/endereco/1",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sName",
+							"value": "otávio",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Edita um usuário no banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"url": "http://192.168.115.138:8080/v1/endereco/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Remove um usuário do banco de dados"
+			},
+			"response": []
+		}
+	]
+}
